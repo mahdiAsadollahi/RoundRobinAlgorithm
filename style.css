@@ -86,5 +86,28 @@ body {
 }
 
 .queue {
-    wid
+    background-color: #7FC7D9;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.queue p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin: 5px;
+    background-color: #365486;
+    padding: 8px;
+    font-size: .9rem;
+}
+
+.console {
+    margin: 10px;
+    background-color: #000;
+    color: white;
+    padding: 8px;
+    font-size: .8rem;
+    font-family:'Courier New', Courier, monospace;
 }

@@ -1,6 +1,7 @@
 const proccessNameInput = document.getElementById('proccessNameInput')
 const burstTimeInput = document.getElementById('burstTimeInput')
 const addProccessBtn = document.getElementById('addProccessBtn')
+const queueElem = document.getElementById('queue')
 
 addProccessBtn.addEventListener("click", () => {
     Swal.fire({
@@ -10,14 +11,23 @@ addProccessBtn.addEventListener("click", () => {
     })
 })
 
+let proccesses = [
+    { name: "P1", burstTime: 5 },
+    { name: "P2", burstTime: 3 },
+    { name: "P3", burstTime: 8 },
+    { name: "P4", burstTime: 6 },
+    { name: "P5", burstTime: 4 }
+]
 
-// let proccesses = [
-//     { name: "P1", burstTime: 5 },
-//     { name: "P2", burstTime: 3 },
-//     { name: "P3", burstTime: 8 },
-//     { name: "P4", burstTime: 6 },
-//     { name: "P5", burstTime: 4 }
-// ]
+window.addEventListener("load", () => {
+    proccesses.forEach(proccess => {
+        let proccessElem = document.createElement("p")
+        proccessElem.innerHTML = `[{name : ${proccess.name}, burstTime : ${proccess.burstTime}}]`
+        queueElem.append(proccessElem)
+    })
+})
+
+
 
 // let timeQuantom = 2
 
