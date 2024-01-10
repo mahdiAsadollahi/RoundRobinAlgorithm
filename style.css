@@ -1,3 +1,90 @@
-h1 {
-    color: red;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #DCF2F1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.addProccess-container {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.addProccess-container h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.addProccess-container input {
+    margin-bottom: 30px;
+    padding: 10px 5px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #000;
+}
+
+.addProccess-container input:focus {
+    outline: none;
+}
+
+.addProccess-container .button {
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.addBtn {
+    border: 1px solid #7FC7D9;
+}
+
+.addBtn:hover {
+    background-color: rgb(41, 41, 41);
+    color: #fff;
+}
+
+.runBtn {
+    background-color: green;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.runBtn:hover {
+    background: white;
+    border: 1px solid green;
+    color: green;
+}
+
+.run-container {
+    width: 70%;
+    margin: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.queue {
+    wid
 }

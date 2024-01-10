@@ -1,30 +1,43 @@
-let proccesses = [
-    { name: "P1", burstTime: 5 },
-    { name: "P2", burstTime: 3 },
-    { name: "P3", burstTime: 8 },
-    { name: "P4", burstTime: 6 },
-    { name: "P5", burstTime: 4 }
-]
+const proccessNameInput = document.getElementById('proccessNameInput')
+const burstTimeInput = document.getElementById('burstTimeInput')
+const addProccessBtn = document.getElementById('addProccessBtn')
 
-let timeQuantom = 2
+addProccessBtn.addEventListener("click", () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'test',
+        text: `${proccessNameInput.value} - ${burstTimeInput.value}`
+    })
+})
 
-let queue = []
 
-for (let i = 0; i < proccesses.length; i++) {
-    queue.push(proccesses[i])
-}
+// let proccesses = [
+//     { name: "P1", burstTime: 5 },
+//     { name: "P2", burstTime: 3 },
+//     { name: "P3", burstTime: 8 },
+//     { name: "P4", burstTime: 6 },
+//     { name: "P5", burstTime: 4 }
+// ]
 
-while (queue.length > 0) {
-    let currentProccess = queue.shift()
+// let timeQuantom = 2
 
-    for (let i = 0; i < timeQuantom; i++) {
-        if (currentProccess.burstTime > 0) {
-            console.log(`Running : ${currentProccess.name}`);
-            currentProccess.burstTime--
-        }
-    }
+// let queue = []
 
-    if (currentProccess.burstTime > 0) {
-        queue.push(currentProccess)
-    }
-}
+// for (let i = 0; i < proccesses.length; i++) {
+//     queue.push(proccesses[i])
+// }
+
+// while (queue.length > 0) {
+//     let currentProccess = queue.shift()
+
+//     for (let i = 0; i < timeQuantom; i++) {
+//         if (currentProccess.burstTime > 0) {
+//             console.log(`Running : ${currentProccess.name}`);
+//             currentProccess.burstTime--
+//         }
+//     }
+
+//     if (currentProccess.burstTime > 0) {
+//         queue.push(currentProccess)
+//     }
+// }
