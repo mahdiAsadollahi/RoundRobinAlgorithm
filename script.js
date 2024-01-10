@@ -3,21 +3,32 @@ const burstTimeInput = document.getElementById('burstTimeInput')
 const addProccessBtn = document.getElementById('addProccessBtn')
 const queueElem = document.getElementById('queue')
 
-addProccessBtn.addEventListener("click", () => {
-    Swal.fire({
-        icon: 'success',
-        title: 'test',
-        text: `${proccessNameInput.value} - ${burstTimeInput.value}`
-    })
-})
 
-let proccesses = [
-    { name: "P1", burstTime: 5 },
-    { name: "P2", burstTime: 3 },
-    { name: "P3", burstTime: 8 },
-    { name: "P4", burstTime: 6 },
-    { name: "P5", burstTime: 4 }
-]
+const queue = null;
+
+addProccessBtn.addEventListener("click", () => {
+    let newProccess = {
+        name: proccessNameInput.value,
+        burstTime: +burstTimeInput.value
+    }
+
+    let getQueueLocalstorage = JSON.parse(localStorage.getItem('queue'))
+
+    if (!getQueueLocalstorage) {
+        queue = [{ ...newProccess }]
+        localStorage.setItem('queue', JSON.stringify(queue))
+        Swal.fire({
+            icon: 'success',
+            title: 'Good Job :))',
+            text: 'proccess add in queue'
+        })
+    } else {
+        let queue = [...getQueueLocalstorage, newProccess]
+        localStorage.setItem('queue', JSON.stringify(queue))
+    }
+
+    // queue = 
+})
 
 window.addEventListener("load", () => {
     proccesses.forEach(proccess => {
