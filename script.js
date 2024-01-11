@@ -58,7 +58,7 @@ function reloadProccess() {
 }
 
 function clearConsole() {
-    consoleElem.innerHTML = "queue is empty ..."
+    consoleElem.innerHTML = ">> queue is empty ..."
 }
 
 function deleteInputValue() {
